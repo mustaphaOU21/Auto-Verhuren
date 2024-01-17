@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    width: 100%;
+}
+/* nav */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(#0f0c29, #302b63, #24243e);
+    color: white;
+}
+
+nav img{
+    width: 100px;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-right: 20px;
+    gap: 40px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.link::after{
+    content: '';
+    width: 0px;
+    height: 2px;
+    background: #2496ff;
+    display: block;
+}
+
+.link:hover::after{
+    width: 50px;
+    transition: all 0.3s;
+}
+
+.login{
+    display: flex;
+    text-align: center;
+    background: #2496ff;
+    padding: 5px 5px;
+    border-radius: 5%;
+}
+.login:hover{
+    background: #6fc1ff;
+    color: white;
+}
+
+/* dropdown login */
+.user-icon{
+    cursor: pointer;
+}
+.user{
+    margin: 0 20px;
+}
+.user-menu{
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #24243e;
+    position: absolute;
+    top: 115px;
+    right: 0px;
+    padding: 10px;
+    z-index: 100;
+}
+.user-menu li{
+    width: 100%;
+}
+.user-menu li:hover{
+    background: #6fc1ff;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Hamburger menu */
+
+.hamburegremenu {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    right: 10px;
+    z-index: 10;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+
+@media(max-width:768px) {
+    .hamburegremenu {
+        display: block;
+    }
+
+    .hamburegremenu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburegremenu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburegremenu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .links {
+        z-index: 100;
+        position: absolute;
+        left: -100%;
+        top: 115px;
+        flex-direction: column;
+        background: linear-gradient(#0f0c29, #302b63, #24243e);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .links.active {
+        left: 0;
+    }
+
+    .user{
+        margin: 0 0px;
+        padding: 0;
+    }
+
+    nav{
+        justify-content: space-around;
+    }
+}
+/* favotite */
+
+.favorite{
+    cursor: pointer;
+}
+
+.favoritelist{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #24243e;
+    position: absolute;
+    top: 115px;
+    right: 90px;
+    padding: 10px;
+    z-index: 100;
+}
+
+
+/* Footer */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: linear-gradient(#0f0c29, #302b63, #24243e);
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+}
+
+footer img {    
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+footer p{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 25px;
+    font-weight: 200;
+    color: white;
+}
+
+footer svg{
+    cursor: pointer;
+    margin: 10px;
+    color: white;
+}
+
+footer svg:hover{
+    color: #2496ff;
+}

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #302b63, #24243e);
+}
+.print{
+    position: sticky;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #7b6fff;
+    color: #ddd;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 10px #7b6fff;
+}
+.invoice h1{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    margin: 50px 0;
+    letter-spacing: 10px;
+    color: white;
+}
+.invoice-car{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.invoice-car img{
+    width: 400px;
+    height: 300px;
+    margin-bottom: 50px;
+    border-radius: 50%;
+    border: 5px solid #7b6fff;
+    box-shadow: 0 0 10px #7b6fff;
+}
+
+.invoice-car h1{
+    font-size: 30px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.invoice-info{
+    margin: 400px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.invoice-logo{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.info-table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.info-table th, .info-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.info-table tr {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+.info-table th {
+    background-color: #7b6fff;
+}
+
+.info-table tr:nth-child(even) {
+    background-color: black;
+}

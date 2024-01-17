@@ -1,0 +1,314 @@
+.body{
+    width: 100%;
+    height: 100%;
+    background: black;
+    overflow-x: hidden;
+}
+.head{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0 0 400px 0;
+}
+
+.head h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 10px;
+    z-index: 10;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+.head h1:hover {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+}
+
+.head img{
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.calculater{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 400px 0;
+}
+
+.calculater h1{
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 100px;
+    font-weight: 600;
+}
+
+.calculater form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #0ff;
+    justify-content: space-around;
+}
+.calculater form input{
+    width: 20%;
+    padding: 10px;
+    outline: transparent;
+    border-radius: 5px;
+    border: 2px solid #0ff;
+    background: black;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.calculater select{
+    padding: 10px;
+    outline: transparent;
+    border-radius: 5px;
+    border: 2px solid #0ff;
+    color: #6d69a0;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 0 0 20px;
+    background: transparent;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+}
+
+.calculater select option{
+    border: none;
+    outline: transparent;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    color: #302b63;
+    background: black;
+}
+
+.calculater .calculate{
+    padding: 10px;
+    outline: transparent;
+    border-radius: 5px;
+    border: 2px solid #0ff;
+    color: #302b63;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 0 0 20px;
+    background: transparent;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    transition: all 1s ease-in-out;
+}
+
+.calculate:hover{
+    background: #0ff;
+    color: black;
+}
+.calculater form{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+/* Search */
+.animation{
+    transform: translateX(100%);
+    transition: transform 0.8s ease-in-out;
+}
+.animation.show{
+    transform: translateX(0);
+}
+.search{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 400px 0;
+}
+
+.search h1{
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 100px;
+    font-weight: 600;
+}
+
+.search .search-box{
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+.input-search{
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  background-color: #22a6b3;
+  padding-right: 40px;
+  color:#fff;
+}
+.input-search::placeholder{
+  color:rgba(255,255,255,.5);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.btn-search{
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color:#ffffff ;
+  background-color:transparent;
+  pointer-events: painted;  
+}
+.btn-search:focus ~ .input-search{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+.input-search:focus{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.car {
+    width: 300px;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.car h1 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.car img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.car button {
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #5446ef;
+    color: aliceblue;
+    transition: all 0.5s ease-in-out;
+}
+
+.car button:hover {
+    background: #1500ff;
+}
+
+@media(max-width:768px){
+    .head h1{
+        font-size: 50px;
+        letter-spacing: 5px;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+    }
+    .head img{
+        height: 50vh;
+        opacity: 0.9;
+        object-fit: cover;
+        object-position: center;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        border: 0 0 0 0;
+        border-radius: 0 0 0 0;
+        transition: all 1s ease-in-out;
+        transform: translate(0, 0);
+    }
+
+    .calculater{
+        margin: 0 0 200px 0;
+        padding: 0 0 0 0;
+        border: 0 0 0 0;
+        border-radius: 0 0 0 0;
+        transition: all 1s ease-in-out;
+        transform: translate(0, 0);
+    }
+
+    .search{
+        margin: 0 0 200px 0;
+        padding: 0 0 0 0;
+        border: 0 0 0 0;
+        border-radius: 0 0 0 0;
+        transition: all 1s ease-in-out;
+        transform: translate(0, 0);
+    }
+
+    .calculater h1{
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
+
+    .calculater form .form-group{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search{
+        display: none;
+    }
+
+    .animation{
+        transform: translateX(0);
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        border: 0 0 0 0;
+        border-radius: 0 0 0 0;
+        transition: transform 0.8s ease-in-out;
+    }
+}
